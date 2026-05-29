@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { Schema } from "mongoose";
+import rout from "./routes/routes"
 // create express app
 const app = express();
 
@@ -12,7 +13,9 @@ app.use(express.urlencoded());
 app.get('/', (req, res)=>{
     res.send("app is runing successfully !");
 
-})
+});
+
+
 
 // define route to create user 
 app.post("/api/users",(req, res)=>{
