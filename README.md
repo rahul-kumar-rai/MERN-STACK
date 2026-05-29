@@ -201,83 +201,82 @@ Performance:
 
 
 
-. Page load time < 3 seconds
+* Page load time < 3 seconds
 
-. API response time < 500ms
+* API response time < 500ms
 
-· Image optimization via Cloudinary (CDN)
+* Image optimization via Cloudinary (CDN)
 
-. Lazy loading for product images
+* Lazy loading for product images
 
-· Pagination for product listing (20 items/page)
+* Pagination for product listing (20 items/page)
 
 Scalability:
 
 
 
-· Monorepo structure easily separates to microservices later
+* Monorepo structure easily separates to microservices later
 
-. Database indexed for fast queries
+* Database indexed for fast queries
 
-· Stateless backend (can run multiple instances)
+* Stateless backend (can run multiple instances)
 
-. Redis can be added for caching/sessions
+* Redis can be added for caching/sessions
 
 Availability:
 
 
 
-. Deployed on Render with auto-restart
+* Deployed on Render with auto-restart
 
-· Database backups via MongoDB Atlas
+* Database backups via MongoDB Atlas
 
-. Payment gateway fallback error handling
+* Payment gateway fallback error handling
 
-. User-friendly error messages
+* User-friendly error messages
 
 Security:
 
 
 
-. HTTPS only (Render provides SSL)
+* HTTPS only (Render provides SSL)
 
-. JWT for stateless auth
+* JWT for stateless auth
 
-. CORS to prevent unauthorized API access
+* CORS to prevent unauthorized API access
 
-. Input sanitization
+* Input sanitization
 
-. Rate limiting can be added
+* Rate limiting can be added
 
-Reliability:
+#### Reliability:
 
 
 
-. Transaction handling for orders
+* Transaction handling for orders
 
-. Razorpay webhook for payment confirmation
+* Razorpay webhook for payment confirmation
 
-. Email confirmation for order status
+* Email confirmation for order status
 
-. Order rollback on payment failure
+* Order rollback on payment failure
 
-Maintainability:
+#### Maintainability:
+*  Clear folder structure
 
-. Clear folder structure
+* Consistent naming conventions
 
-. Consistent naming conventions
+* Comments in complex logic
 
-. Comments in complex logic
+* Version control (Git)
 
-. Version control (Git)
-
-. Environment-based config
+* Environment-based config
 
 
 
 9\. PAYMENT FLOW
 
-Razorpay Integration:
+#### Razorpay Integration:
 
 
 
@@ -292,16 +291,12 @@ Razorpay Integration:
 * Order status updated to "processing"
 * DEPLOYMENT (Render)
 
-
-
-Environment Variables on Render:
-
-
+### Environment Variables on Render:
 
 * NODE\_ENV=production
 * MONGO\_URI (MongoDB Atlas connection)
 * JWT\_SECRET
-* CLOUDINARY\_CLOUD\_NAME, CLOUDINARY\_API\_KEY, CLOUDINARY\_API\_SECRET
+* CLOUDINARY\_CLOUD\_NAME, CLOUDINARY\_API\_KEY,CLOUDINARY\_API\_SECRET
 * RAZORPAY\_KEY\_ID, RAZORPAY\_KEY\_SECRET
 * GMAIL\_USER, GMAIL\_PASS
 * FRONTEND\_URL (Your Render URL)
