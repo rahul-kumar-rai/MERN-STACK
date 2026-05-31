@@ -144,3 +144,8 @@ Access Granted
 - creating server and listing on index.js file
 - mongodb connection and using db connection after server starting
 - req and res sending using express.json()
+- router connecting 
+- controllers and routers connects
+- password protected bcriptjs
+- store in database 
+- api response class 
